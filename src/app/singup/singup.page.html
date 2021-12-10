@@ -1,0 +1,64 @@
+<ion-content padding class="background">
+  <!-- 
+    Se establece un titulo que este separadp de del <ion-content>
+    mediante el class ion-padding-top
+    y que el texto <ion-label> y su contenido este centrado
+    mediante el class ion-text-center
+    See: https://ionicframework.com/docs/layout/css-utilities#text-alignment
+    See: https://ionicframework.com/docs/layout/css-utilities#element-padding
+  -->
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      <h1>Sistema de Asistencia</h1>
+      <p>Instituto Profesional DuocUc</p>
+    </ion-label>
+  </ion-title>
+  <!--
+    Se genera una divición donde estara el contenido del login
+    para esto se utilizara ion-padding-vertical que aplica un
+    relleno arriba y abajo de 16px por defecto
+    See: https://ionicframework.com/docs/layout/css-utilities#element-padding
+  -->
+  <div class="ion-padding-vertical">
+    <!--
+      Se establece un card que contendra un titulo
+      y un contenido
+    -->
+    <ion-card class="ion-text-center">
+      <ion-card-title class="ion-text-center">
+        <ion-label>
+          <h1>¡Registrate!</h1>
+        </ion-label>
+      </ion-card-title>
+    
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="singup.Usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Contraseña</ion-label>
+          
+          <!--
+            El type Password inmediatamente pasa lo que uno
+            escribe a *****
+          -->
+          <ion-input type="password" [(ngModel)]="singup.Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Repite tu contraseña</ion-label>
+          
+          <!--
+            El type Password inmediatamente pasa lo que uno
+            escribe a *****
+          -->
+          <ion-input type="password" ></ion-input>
+
+
+        </ion-item>
+      <ion-button shape="block" (click)="registrar()">Registrarse</ion-button>
+      <br>
+      <br>
+    </ion-card>
+  </div>
+  
+</ion-content>
